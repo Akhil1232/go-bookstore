@@ -29,7 +29,7 @@ func GetBookById(w http.ResponseWriter, r *http.Request){
 	}
 	bookDetails, _ := models.GetBookById(ID)
 	res, _ := json.Marshal(bookDetails)
-	w.Header().Set("Content-Type","application/json")
+	w.Header().Set("Content-Type","pkglication/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
